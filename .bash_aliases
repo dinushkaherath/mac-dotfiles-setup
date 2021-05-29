@@ -85,7 +85,8 @@ gitupdate() {
     ssh -T git@github.com
 }
 alias gp='git pull'
-alias gu=gitupdate
+alias gu='git update'
+alias gpu='git push'
 alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
