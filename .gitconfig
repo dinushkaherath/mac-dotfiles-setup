@@ -1,0 +1,9 @@
+[user]
+	name = dinushkaherath
+	email = dinushkaherath@gmail.com
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /Users/dinushkaherath/.gitignore_global
