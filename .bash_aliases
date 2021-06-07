@@ -109,7 +109,16 @@ export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 #Missing zstd and openssl when installing gem
+#bundle config --global build.mysql2 --with-opt-dir="$(brew --prefix zstd):$(brew --prefix openssl)" this works first
+#first ^^^
 #gem install mysql2 -- --with-opt-dir="$(brew --prefix zstd):$(brew --prefix openssl)"
+
+#Ruby version not from asdf
+# add /Users/dinushkaherath/.asdf/shims/ to /etc/paths top
+
+#nodejs install arch -x86_64 asdf install nodejs 12.9.0
+
+#
 
 alias brails='bundle exec rails'
 alias update='brew update && brew upgrade'
