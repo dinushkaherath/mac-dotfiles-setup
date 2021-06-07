@@ -23,11 +23,6 @@ function hs_bind(key, func, repeatKeyPress)
     end
 end
 
-
-h_bind("r", hs.reload)
-hs_bind("r", hs.toggleConsole)
-
-
 hs.alert.show("Hammerspoon started")
 
 function file_exists(path)
@@ -70,6 +65,9 @@ h_bind("p", launchApp("System Preferences"))
 h_bind("f", launchApp("Finder"))
 h_bind(";", launchApp("Slack"))
 h_bind("u", launchApp("Music"))
+h_bind("r", launchApp("MR"))
+h_bind("v", launchApp("Voice"))
+hs_bind("r", launchApp("Ministry Reading"))
 
 
 -- window functions
@@ -187,8 +185,8 @@ clipboardTool = hs.loadSpoon("ClipboardTool")
 clipboardTool.paste_on_select = true
 clipboardTool.show_in_menubar = false
 clipboardTool:start()
-h_bind("v", function() clipboardTool:toggleClipboard() end)
-hs_bind("v", function() clipboardTool:clearAll() end)
+hs_bind("v", function() clipboardTool:toggleClipboard() end)
+hs_bind("c", function() clipboardTool:clearAll() end)
 
 -- vi like cursor movements
 keyDelay = 50
