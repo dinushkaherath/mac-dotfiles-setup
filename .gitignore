@@ -40,3 +40,4 @@ Public/
 .yarnrc
 .zsh_sessions/
 .config/htop/
+.webdrivers/geckodriver
