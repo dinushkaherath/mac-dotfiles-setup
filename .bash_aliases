@@ -101,8 +101,34 @@ _comp_options+=(globdots)
 #Personal additions
 alias virc='vi ~/.bash_aliases'
 alias src='source ~/.zshrc'
-alias a="arch -x86_64"
-alias ibrew="arch -x86_64 brew"
+
+alias abrew="/opt/homebrew/bin/brew"
+alias i="arch -x86_64"
+alias ibrew="arch -x86_64  /usr/local/bin/brew"
+alias irvm="arch -x86_64 rvm"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+_ARCH=$(arch)
+PROMPT="$_ARCH $PROMPT"
+
+# Requires iterm2
+if [[ "$_ARCH" == "i386" ]]; then
+  echo -ne "\033]1337;SetColors=bg=000FC5\007"
+  #usr/local is X_86
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/opt:$PATH"
+fi
+
+if [[ "$_ARCH" == "arm64" ]]; then
+  echo -ne "\033]1337;SetColors=bg=1e1d40\007"
+  #usr/local is X_86
+  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/opt:$PATH"
+fi
+alias color='echo -ne "\033]1337;SetColors=bg=1e1d40\007"'
+
 . /opt/homebrew/opt/asdf/asdf.sh
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"

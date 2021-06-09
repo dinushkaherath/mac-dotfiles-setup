@@ -45,3 +45,5 @@ Public/
 .rbenv/shims
 .rbenv/versions/
 .bash_history
+.rubies/
+src/
