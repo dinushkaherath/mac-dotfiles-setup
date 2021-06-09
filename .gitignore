@@ -42,3 +42,6 @@ Public/
 .config/htop/
 .webdrivers/geckodriver
 .solargraph/cache
+.rbenv/shims
+.rbenv/versions/
+.bash_history
