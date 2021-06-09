@@ -41,3 +41,4 @@ Public/
 .zsh_sessions/
 .config/htop/
 .webdrivers/geckodriver
+.solargraph/cache
