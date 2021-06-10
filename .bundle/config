@@ -1,2 +1,3 @@
 ---
 BUNDLE_BUILD__MYSQL2: "--with-opt-dir=/opt/homebrew/opt/zstd:/opt/homebrew/opt/openssl@1.1"
+BUNDLE_JOBS: "7"
