@@ -65,7 +65,7 @@ h_bind("p", launchApp("System Preferences"))
 h_bind("f", launchApp("Finder"))
 h_bind(";", launchApp("Slack"))
 h_bind("u", launchApp("Music"))
-h_bind("r", launchApp("MR"))
+h_bind("t", launchApp("aText"))
 h_bind("v", launchApp("Voice"))
 hs_bind("r", launchApp("Ministry Reading"))
 
@@ -184,6 +184,7 @@ hs_bind("up", hs.grid.pushWindowUp)
 clipboardTool = hs.loadSpoon("ClipboardTool")
 clipboardTool.paste_on_select = true
 clipboardTool.show_in_menubar = false
+clipboardTool.show_copied_alert = false
 clipboardTool:start()
 hs_bind("v", function() clipboardTool:toggleClipboard() end)
 hs_bind("c", function() clipboardTool:clearAll() end)
