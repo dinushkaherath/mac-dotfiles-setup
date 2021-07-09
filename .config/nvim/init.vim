@@ -1,3 +1,5 @@
+set number
+nnoremap <space> <NOP>
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -9,6 +11,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-rails'
+Plug 'easymotion/vim-easymotion'
 
 
 " Initialize plugin system
@@ -21,10 +24,13 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>j
 
 nnoremap <c-p> :GFiles --cached --others --exclude-standard<cr>
-
+map <leader>gm :GFiles --cached --others --exclude-standard app/models<cr>
+map <leader>gv :GFiles --cached --others --exclude-standard app/views<cr>
+map <leader>gc :GFiles --cached --others --exclude-standard app/controllers<cr>
 
 "quit files with leader q
-nnoremap  <leader>q :q<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>x :wq!<cr>
 
 "get to Ack quickly with leader a
 nnoremap <leader>a :Ack
@@ -44,4 +50,25 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+"get out of insert mode
+inoremap jj <ESC>
+inoremap jk <ESC>
+
+"some stuff for easy tabs
+map <C-t> <esc>:tabnew<cr>
+"move back and forth with tabs
+noremap <S-l> gt
+noremap <S-h> gT
+
+imap <c-l> <space>=><space>
+
+"switch to the last file
+nnoremap <leader><leader> <c-^>
+
+"easymotion settings
+let g:EasyMotion_do_mapping = 0 "disable all mapping
+let g:EasyMotion_smartcase = 1 "case insensitive
+
+nmap s <Plug>(easymotion-overwin-f2)
 
