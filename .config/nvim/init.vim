@@ -11,8 +11,6 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-rails'
 
 
-
-
 " Initialize plugin system
 call plug#end()
 
@@ -21,8 +19,6 @@ let mapleader = " "
 "map <leader>w to open a new vsplit and switch to it
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>j
-
-
 
 nnoremap <c-p> :GFiles --cached --others --exclude-standard<cr>
 
@@ -39,11 +35,8 @@ map <leader>k :Ack <C-R><C-W><CR>
 "let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore-dir log --ignore-dir versions'
 let g:ackprg = 'rg --vimgrep --no-heading'
 
-
-
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>N :NERDTreeFind<CR>
-
 
 "move around your splits with ctrl hjkl which b/c capslock is assigned to ctrl
 "works well

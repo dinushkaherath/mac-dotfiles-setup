@@ -100,6 +100,7 @@ _comp_options+=(globdots)
 
 #Personal additions
 alias virc='vi ~/.bash_aliases'
+alias zrc='vi ~/.zshrc'
 alias src='source ~/.zshrc'
 
 alias abrew="/opt/homebrew/bin/brew"
@@ -133,6 +134,7 @@ alias color='echo -ne "\033]1337;SetColors=bg=1e1d40\007"'
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Users/dinushkaherath/Developer/flutter/bin"
 
 #Missing zstd and openssl when installing gem
 #bundle config --global build.mysql2 --with-opt-dir="$(brew --prefix zstd):$(brew --prefix openssl)" this works first
