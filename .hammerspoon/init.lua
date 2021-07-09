@@ -198,6 +198,6 @@ keyDelay = 50
 
 -- h_bind("f", function() hs.eventtap.keyStroke({}, "pagedown", keyDelay) end, true)
 -- h_bind("b", function() hs.eventtap.keyStroke({}, "pageup", keyDelay) end, true)
-h_bind("a", function() hs.eventtap.keyStroke({}, "home", keyDelay) end, true)
-h_bind("s", function() hs.eventtap.keyStroke({}, "end", keyDelay) end, true)
+-- h_bind("a", function() hs.eventtap.keyStroke({}, "home", keyDelay) end, true)
+-- h_bind("s", function() hs.eventtap.keyStroke({}, "end", keyDelay) end, true)
 
