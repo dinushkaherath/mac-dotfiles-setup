@@ -24,12 +24,13 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>j
 
 nnoremap <c-p> :GFiles --cached --others --exclude-standard<cr>
+map <leader>go :GFiles --cached --others --exclude-standard<cr>
 map <leader>gm :GFiles --cached --others --exclude-standard app/models<cr>
 map <leader>gv :GFiles --cached --others --exclude-standard app/views<cr>
 map <leader>gc :GFiles --cached --others --exclude-standard app/controllers<cr>
 
 "quit files with leader q
-nnoremap <leader>q :q<cr>
+nnoremap <leader>q :q!<cr>
 nnoremap <leader>x :wq!<cr>
 
 "get to Ack quickly with leader a
