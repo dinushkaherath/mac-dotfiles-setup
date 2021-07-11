@@ -2,7 +2,7 @@
   "title": "personal config",
   "rules": [
     {
-      "description": "Change caps_lock to command+control+option. (Post escape key when pressed alone)",
+      "description": "Change caps_lock to command+control+option.",
       "manipulators": [
         {
           "type": "basic",
@@ -21,11 +21,6 @@
                 "right_control",
                 "right_option"
               ]
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "escape"
             }
           ]
         }
@@ -125,6 +120,29 @@
           "to": [
             {
               "key_code": "return_or_enter"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "caps_lock + space == delete",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
             }
           ],
           "type": "basic"
