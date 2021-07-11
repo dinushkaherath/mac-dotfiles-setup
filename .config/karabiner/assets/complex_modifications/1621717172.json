@@ -108,7 +108,7 @@
       "manipulators": [
         {
           "from": {
-            "key_code": ";",
+            "key_code": "semicolon",
             "modifiers": {
               "mandatory": [
                 "right_command",
