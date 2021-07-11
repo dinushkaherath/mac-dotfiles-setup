@@ -104,11 +104,11 @@
       ]
     },
     {
-      "description": "caps_lock + space == enter",
+      "description": "caps_lock + ; == enter",
       "manipulators": [
         {
           "from": {
-            "key_code": "spacebar",
+            "key_code": ";",
             "modifiers": {
               "mandatory": [
                 "right_command",
