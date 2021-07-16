@@ -91,16 +91,16 @@ hs.window.animationDuration = 0
 
 h_bind("`", positionWindow(0, 0, 1, 1))
 h_bind("1", positionWindow(0, 0, 1/2, 1))
-h_bind("2", positionWindow(1/2, 0, 1/2, 1))
-h_bind("3", positionWindow(1/5, 0, 5/8, 1))
+h_bind("2", positionWindow(1/5, 0, 5/8, 1))
+h_bind("3", positionWindow(1/2, 0, 1/2, 1))
 
 h_bind("4", positionWindow(1/2, 0, 1/2, 1/2))
 h_bind("5", positionWindow(0, 1/2, 1/2, 1/2))
 h_bind("6", positionWindow(1/2, 1/2, 1/2, 1/2))
 
-h_bind("q", positionWindow(1/4, 0, 9/24, 1))
+h_bind("q", positionWindow(0, 0, 1/4, 1))
+h_bind("w", positionWindow(1/4, 0, 9/24, 1))
 h_bind("e", positionWindow(5/8, 0, 3/8, 1))
-h_bind("w", positionWindow(0, 0, 1/4, 1))
 
 -- grid based window functions
 
