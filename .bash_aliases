@@ -151,3 +151,4 @@ export PATH="$PATH:/Users/dinushkaherath/Developer/flutter/bin"
 alias brails='bundle exec rails'
 alias update='brew update && brew upgrade'
 alias dps='docker ps'
+alias py='python3'
