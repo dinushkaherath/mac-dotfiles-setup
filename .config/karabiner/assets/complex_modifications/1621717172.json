@@ -27,6 +27,32 @@
       ]
     },
     {
+      "description": "caps_lock + o == control+b",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "b",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "caps_lock + i/j/k/l == vim directional Keys",
       "manipulators": [
         {
