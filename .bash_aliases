@@ -24,7 +24,7 @@ ex ()
   fi
 }
 
-export EDITOR=vim
+export EDITOR=nvim
 
 alias pacman-update='sudo pacman-mirrors --geoip'
 
@@ -100,7 +100,6 @@ _comp_options+=(globdots)
 
 #Personal additions
 alias virc='vi ~/.bash_aliases'
-alias zrc='vi ~/.zshrc'
 alias src='source ~/.zshrc'
 
 alias abrew="/opt/homebrew/bin/brew"
