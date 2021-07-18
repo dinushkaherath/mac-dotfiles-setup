@@ -18,7 +18,7 @@ export ZSH="/Users/dinushkaherath/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Custom Variables
-EDITOR=vim
+EDITOR=nvim
 
 # History in cache directory:
 HISTSIZE=10000000
@@ -27,7 +27,7 @@ HISTFILE=~/.cache/zshhistory
 setopt appendhistory
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+#setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
