@@ -68,6 +68,7 @@ h_bind("u", launchApp("Music"))
 h_bind("t", launchApp("aText"))
 h_bind("v", launchApp("Voice"))
 hs_bind("r", launchApp("Ministry Reading"))
+hs_bind("e", launchApp("MR"))
 
 
 -- window functions
