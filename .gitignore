@@ -64,3 +64,5 @@ history.txt
 .android/analytics.settings
 .python_history
 StudioProjects/
+Developer/flutter
+nltk_data/tokenizers
