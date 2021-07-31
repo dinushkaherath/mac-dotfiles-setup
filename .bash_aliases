@@ -87,6 +87,7 @@ gitupdate() {
 alias gp='git pull'
 alias gu='git update'
 alias gpu='git push'
+alias gcob='gco -b'
 alias lbrynet='/opt/LBRY/resources/static/daemon/lbrynet'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
@@ -151,3 +152,5 @@ alias brails='bundle exec rails'
 alias update='brew update && brew upgrade'
 alias dps='docker ps'
 alias py='python3'
+alias t_n='~/./.tmux-n.sh'
+alias t_midc='~/./.tmux-midcap.sh'
