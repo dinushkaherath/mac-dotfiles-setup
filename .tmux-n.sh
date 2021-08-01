@@ -1,1 +1,0 @@
-tmux new-session \; split-window -h \; split-window -h \; select-layout even-horizontal \; split-window -v \; select-pane -t 0 \;
