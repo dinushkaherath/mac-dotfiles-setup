@@ -151,5 +151,6 @@ export PATH="$PATH:/Users/dinushkaherath/Developer/flutter/bin"
 alias brails='bundle exec rails'
 alias update='brew update && brew upgrade'
 alias dps='docker ps'
+alias dpsk='docker container kill $(docker ps -q); docker container rm $(docker ps -a -q)'
 alias py='python3'
 alias tm='~/bin/./load_tmux.sh'
