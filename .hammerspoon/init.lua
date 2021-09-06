@@ -101,7 +101,7 @@ clipboardTool.show_in_menubar = false
 clipboardTool.show_copied_alert = false
 clipboardTool:start()
 hs_bind("v", function() clipboardTool:toggleClipboard() end)
-hs_bind("c", function() clipboardTool:clearAll() end)
+-- hs_bind("c", function() clipboardTool:clearAll() end)
 
 -- vi like cursor movements
 keyDelay = 50
@@ -110,8 +110,28 @@ h_bind("j", function() hs.eventtap.keyStroke({}, "down", keyDelay) end, true)
 h_bind("k", function() hs.eventtap.keyStroke({}, "up", keyDelay) end, true)
 h_bind("l", function() hs.eventtap.keyStroke({}, "right", keyDelay) end, true)
 
+-- added shift left right selecting
+hs_bind("h", function() hs.eventtap.keyStroke({"shift"}, "left", keyDelay) end, true)
+hs_bind("j", function() hs.eventtap.keyStroke({"shift"}, "down", keyDelay) end, true)
+hs_bind("k", function() hs.eventtap.keyStroke({"shift"}, "up", keyDelay) end, true)
+hs_bind("l", function() hs.eventtap.keyStroke({"shift"}, "right", keyDelay) end, true)
+
 -- h_bind("f", function() hs.eventtap.keyStroke({}, "pagedown", keyDelay) end, true)
 -- h_bind("b", function() hs.eventtap.keyStroke({}, "pageup", keyDelay) end, true)
-h_bind("a", function() hs.eventtap.keyStroke({}, "home", keyDelay) end, true)
-h_bind("s", function() hs.eventtap.keyStroke({}, "end", keyDelay) end, true)
 
+h_bind("q", function() hs.eventtap.keyStroke({}, "home", keyDelay) end, true)
+h_bind("e", function() hs.eventtap.keyStroke({}, "end", keyDelay) end, true)
+
+-- added start/ end of line
+h_bind("a", function() hs.eventtap.keyStroke({"cmd"}, "left", keyDelay) end, true)
+h_bind("f", function() hs.eventtap.keyStroke({"cmd"}, "right", keyDelay) end, true)
+hs_bind("a", function() hs.eventtap.keyStroke({"cmd", "shift"}, "left", keyDelay) end, true)
+hs_bind("f", function() hs.eventtap.keyStroke({"cmd", "shift"}, "right", keyDelay) end, true)
+
+-- added move left/right by word (alt)
+h_bind("s", function() hs.eventtap.keyStroke({"alt"}, "left", keyDelay) end, true)
+h_bind("d", function() hs.eventtap.keyStroke({"alt"}, "right", keyDelay) end, true)
+hs_bind("s", function() hs.eventtap.keyStroke({"alt", "shift"}, "left", keyDelay) end, true)
+hs_bind("d", function() hs.eventtap.keyStroke({"alt", "shift"}, "right", keyDelay) end, true)
+
+h_bind(".", function() hs.eventtap.leftClick(hs.mouse.getRelativePosition(), keyDelay) end, true)
