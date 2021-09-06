@@ -1,4 +1,5 @@
 set number
+set relativenumber
 nnoremap <space> <NOP>
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -12,6 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-rails'
 Plug 'easymotion/vim-easymotion'
+PlugIn 'vim-scripts/indentpython.vim'
 
 
 " Initialize plugin system
@@ -31,7 +33,7 @@ map <leader>gc :GFiles --cached --others --exclude-standard app/controllers<cr>
 
 "quit files with leader q
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>x :wq!<cr>
+nnoremap <leader>x :w<cr>
 
 "get to Ack quickly with leader a
 nnoremap <leader>a :Ack
@@ -39,7 +41,6 @@ nnoremap <leader>a :Ack
 map <leader>k :Ack <C-R><C-W><CR>
 
 
-"let g:ackprg = 'ag -i --nogroup --nocolor --column --ignore-dir log --ignore-dir versions'
 let g:ackprg = 'rg --vimgrep --no-heading'
 
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -72,4 +73,38 @@ let g:EasyMotion_do_mapping = 0 "disable all mapping
 let g:EasyMotion_smartcase = 1 "case insensitive
 
 nmap s <Plug>(easymotion-overwin-f2)
+
+if executable('rg')
+  let g:ctrlp_user_command = 'rg --files %s'
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_working_path_mode = 'ra'
+  let g:ctrlp_switch_buffer = 'et'
+endif
+
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+" nnoremap <space> za
+"
+
+
+filetype indent on
+:set shiftwidth=4
+
+
+
+" Python tabs and spacing
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+
 
