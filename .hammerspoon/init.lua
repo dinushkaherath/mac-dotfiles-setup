@@ -1,11 +1,8 @@
+
 -- this is comment
 
 local hyper = {"cmd", "alt", "ctrl"}
 local hypershift = {"cmd", "alt", "ctrl", "shift"}
-
-hs.hotkey.bind(hyper, "w", function()
-    hs.alert.show("Hello World!")
-end)
 
 function h_bind(key, func, repeatKeyPress)
     if repeatKeyPress then
@@ -57,18 +54,15 @@ function launchApp(name)
     end
 end
 
-h_bind("x", launchApp("Visual Studio Code"))
+h_bind("i", launchApp("iTerm"))
+h_bind(",", launchApp("Visual Studio Code"))
 h_bind("g", launchApp("Gmail"))
 h_bind("b", launchApp("Google Chrome"))
-h_bind("i", launchApp("iTerm"))
 h_bind("p", launchApp("System Preferences"))
-h_bind("f", launchApp("Finder"))
+h_bind("o", launchApp("Finder"))
 h_bind("'", launchApp("Slack"))
 h_bind("u", launchApp("Music"))
 h_bind("t", launchApp("aText"))
-h_bind("v", launchApp("Voice"))
-hs_bind("r", launchApp("Ministry Reading"))
-hs_bind("e", launchApp("MR"))
 
 
 -- window functions
@@ -90,7 +84,7 @@ end
 
 hs.window.animationDuration = 0 
 
-h_bind("w", positionWindow(1/4, 1/3, 1/2, 1))
+hs_bind("`", positionWindow(1/3, 0, 1/2, 1))
 
 -- Spoon
 -- install from https://www.hammerspoon.org/Spoons/
@@ -100,7 +94,7 @@ clipboardTool.paste_on_select = true
 clipboardTool.show_in_menubar = false
 clipboardTool.show_copied_alert = false
 clipboardTool:start()
-hs_bind("v", function() clipboardTool:toggleClipboard() end)
+h_bind("v", function() clipboardTool:toggleClipboard() end)
 -- hs_bind("c", function() clipboardTool:clearAll() end)
 
 -- vi like cursor movements
@@ -135,3 +129,7 @@ hs_bind("s", function() hs.eventtap.keyStroke({"alt", "shift"}, "left", keyDelay
 hs_bind("d", function() hs.eventtap.keyStroke({"alt", "shift"}, "right", keyDelay) end, true)
 
 h_bind(".", function() hs.eventtap.leftClick(hs.mouse.getRelativePosition(), keyDelay) end, true)
+
+hs_bind("e", function() 
+    hs.execute("diskutil unmountDisk force Storage; diskutil unmountDisk force 'Time Machine'; diskutil eject Storage; diskutil eject 'Time Machine';") 
+end, true)
