@@ -73,3 +73,5 @@ Developer/flutter
 
 # Local Netlify folder
 .netlify
+.config/configstore/update-notifier-netlify-cli.json
+Google Drive
