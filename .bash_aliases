@@ -111,6 +111,9 @@ alias irvm="arch -x86_64 rvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add NPM to PATH
+export PATH="$PATH:$HOME/.asdf/installs/nodejs/16.4.1/.npm/bin"
+
 _ARCH=$(arch)
 PROMPT="$_ARCH $PROMPT"
 
