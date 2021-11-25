@@ -69,3 +69,7 @@ nltk_data/tokenizers
 .irb_history
 Standard Notes Backups/
 Developer/flutter
+.webdrivers
+
+# Local Netlify folder
+.netlify
