@@ -159,6 +159,28 @@ alias py='python3'
 alias tm='~/bin/./load_tmux.sh'
 alias grc='g rebase --continue'
 alias gra='g rebase --abort'
+alias grm='g rebase ${MASTER:-master}'
 alias gcc='g cherry-pick --continue'
 alias gca='g cherry-pick --abort'
 alias gcs='g cherry-pick --skip'
+alias gcom='gco ${MASTER:-master}; gp'
+gri() {
+    if [ -z "$1" ]
+    then
+	echo "Pass in the number of commits to rebase"
+    else
+	git rebase -i HEAD~"$1"
+    fi
+}
+
+alias rs='rails s'
+alias rc='rails c'
+alias rdbd='dka; rails db:drop'
+alias rdbc='rails db:create'
+alias rdbm='rails db:migrate'
+alias rdbmt='rails db:migrate RAILS_ENV=test'
+alias rdbdcm='dka; rails db:drop && rails db:create && rails db:migrate'
+alias rdbdcmt='dka; rails db:drop RAILS_ENV=test && rails db:create RAILS_ENV=test && rails db:migrate RAILS_ENV=test'
+alias rdbr='dka; rails db:drop && rails db:create && rails db:migrate'
+alias rdbrt='dka; rails db:drop RAILS_ENV=test && rails db:create RAILS_ENV=test && rails db:migrate RAILS_ENV=test'
+alias rdbr='rails db:reset'
