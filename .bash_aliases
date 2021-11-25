@@ -153,8 +153,8 @@ export PATH="$PATH:/Users/dinushkaherath/Developer/flutter/bin"
 
 alias brails='bundle exec rails'
 alias update='brew update && brew upgrade'
-alias dps='docker ps'
-alias dka='docker container kill $(docker ps -q); docker container rm $(docker ps -a -q)'
+alias dps='docker ps -a'
+alias dka='docker container kill $(docker ps -q) > /dev/null 2>&1; docker container rm $(docker ps -a -q) > /dev/null 2>&1; echo "docker containers killed"'
 alias py='python3'
 alias tm='~/bin/./load_tmux.sh'
 alias grc='g rebase --continue'
