@@ -2,7 +2,7 @@
   "title": "personal config",
   "rules": [
     {
-      "description": "Change caps_lock to command+control+option. (Post escape key when pressed alone)",
+      "description": "Change caps_lock to command+control+option.",
       "manipulators": [
         {
           "type": "basic",
@@ -21,11 +21,6 @@
                 "right_control",
                 "right_option"
               ]
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "escape"
             }
           ]
         }
