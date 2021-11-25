@@ -129,7 +129,3 @@ hs_bind("s", function() hs.eventtap.keyStroke({"alt", "shift"}, "left", keyDelay
 hs_bind("d", function() hs.eventtap.keyStroke({"alt", "shift"}, "right", keyDelay) end, true)
 
 h_bind(".", function() hs.eventtap.leftClick(hs.mouse.getRelativePosition(), keyDelay) end, true)
-
-hs_bind("e", function() 
-    hs.execute("diskutil unmountDisk force Storage; diskutil unmountDisk force 'Time Machine'; diskutil eject Storage; diskutil eject 'Time Machine';") 
-end, true)
