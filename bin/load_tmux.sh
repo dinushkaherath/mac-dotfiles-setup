@@ -6,7 +6,7 @@
 # present menu for user to choose which workspace to open
 PS3="Please choose your session: "
 # shellcheck disable=SC2207
-IFS=$'\n' && options=("New Session" "New Midcap" "Kill all" $(tmux list-sessions -F "#S" 2>/dev/null))
+IFS=$'\n' && options=("New Session" "New Midcap" "New Cornerstone" "Kill all" $(tmux list-sessions -F "#S" 2>/dev/null))
 echo "Available sessions"
 echo "------------------"
 echo " "
@@ -21,6 +21,11 @@ do
 		"New Midcap")
 			cd /Users/dinushkaherath/Documents/Life/midcapops 
 			~/bin/./midcap_tmux.sh
+			break
+			;;
+		"New Cornerstone")
+			cd /Users/dinushkaherath/Documents/Life/cornerstonedst/oak-atlantic/cornerstone-api
+			~/bin/./corner_tmux.sh
 			break
 			;;
 		"Kill all")
