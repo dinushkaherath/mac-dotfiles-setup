@@ -1,5 +1,0 @@
-.less-history-file:
-.shell
-"      updated_debtors_hash[debtor[:id]] = debtor if debtor.key?(:id)
-.search
-"(row[:number])
