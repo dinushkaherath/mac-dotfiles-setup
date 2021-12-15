@@ -130,6 +130,29 @@
       ]
     },
     {
+      "description": "caps_lock + space == space",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "caps_lock + ; == enter",
       "manipulators": [
         {
