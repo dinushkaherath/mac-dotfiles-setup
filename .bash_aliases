@@ -169,6 +169,8 @@ alias gcc='g cherry-pick --continue'
 alias gca='g cherry-pick --abort'
 alias gcs='g cherry-pick --skip'
 alias gcom='gco ${MASTER:-master}; gp'
+#alias gclb='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch'
+alias gls='g remote update --prune; gbr | grep origin'
 gri() {
     if [ -z "$1" ]
     then
