@@ -151,7 +151,12 @@ export PATH="$PATH:/Users/dinushkaherath/Developer/flutter/bin"
 
 #
 
-alias brails='bundle exec rails'
+#Add Flutter to path
+export PATH="$PATH:$HOME/Developer/flutter/bin"
+
+#Add Dart packages to path
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
 alias update='brew update && brew upgrade'
 alias dps='docker ps -a'
 alias dka='docker container kill $(docker ps -q) > /dev/null 2>&1; docker container rm $(docker ps -a -q) > /dev/null 2>&1; echo "docker containers killed"'
