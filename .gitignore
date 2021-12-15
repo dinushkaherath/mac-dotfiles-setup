@@ -33,7 +33,6 @@ Public/
 .node-gyp/
 .npm/
 .oh-my-zsh/
-.p10k.zsh
 .ssh/
 .viminfo
 .vscode/
@@ -75,3 +74,11 @@ Developer/flutter
 .netlify
 .config/configstore/update-notifier-netlify-cli.json
 Google Drive
+.config/yarn/global
+.pgadmin/
+.lesshst
+.config/configstore/
+.config/configstore/
+Developer/appbrewery
+Developer/github
+Developer/temp_tutorials
