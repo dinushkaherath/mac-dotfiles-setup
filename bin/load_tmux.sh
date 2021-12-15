@@ -19,12 +19,12 @@ do
 			break
 			;;
 		"New Midcap")
-			cd /Users/dinushkaherath/Documents/Life/midcapops 
+			cd /Users/dinushkaherath/Developer/github/midcapops 
 			~/bin/./midcap_tmux.sh
 			break
 			;;
 		"New Cornerstone")
-			cd /Users/dinushkaherath/Documents/Life/cornerstonedst/oak-atlantic/cornerstone-api
+			cd /Users/dinushkaherath/Developer/github/cornerstone-api
 			~/bin/./corner_tmux.sh
 			break
 			;;
