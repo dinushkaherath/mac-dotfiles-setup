@@ -182,12 +182,13 @@ gri() {
 
 alias rs='rails s'
 alias rc='rails c'
-alias rdbd='dka; rails db:drop'
-alias rdbc='rails db:create'
-alias rdbm='rails db:migrate'
+alias rdbd='dka; spring stop; rails db:drop RAILS_ENV=development'
+alias rdbc='rails db:create RAILS_ENV=development'
+alias rdbm='rails db:migrate RAILS_ENV=development'
+alias rdbdt='dka; spring stop; rails db:drop RAILS_ENV=test'
+alias rdbct='rails db:create RAILS_ENV=test'
 alias rdbmt='rails db:migrate RAILS_ENV=test'
-alias rdbdcm='dka; rails db:drop && rails db:create && rails db:migrate'
-alias rdbdcmt='dka; rails db:drop RAILS_ENV=test && rails db:create RAILS_ENV=test && rails db:migrate RAILS_ENV=test'
-alias rdbr='dka; rails db:drop && rails db:create && rails db:migrate'
-alias rdbrt='dka; rails db:drop RAILS_ENV=test && rails db:create RAILS_ENV=test && rails db:migrate RAILS_ENV=test'
-alias rdbr='rails db:reset'
+alias rdbr='rdbd; rdbc; rdbm'
+alias rdbrt='rdbdt; rdbct; rdbmt'
+alias rds="rails db:seed"
+alias rdbrb="rails db:rollback"
