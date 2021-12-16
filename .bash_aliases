@@ -169,7 +169,7 @@ alias gcc='g cherry-pick --continue'
 alias gca='g cherry-pick --abort'
 alias gcs='g cherry-pick --skip'
 alias gcom='gco ${MASTER:-master}; gp'
-#alias gclb='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch'
+alias gclb='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch -d'
 alias gls='g remote update --prune; gbr | grep origin'
 gri() {
     if [ -z "$1" ]
@@ -180,8 +180,25 @@ gri() {
     fi
 }
 
-alias rs='rails s'
-alias rc='rails c'
+get_rs_name() {
+    basename $(git remote show -n origin | grep Push | cut -d: -f2-)
+}
+rs_name=$(get_rs_name)
+
+check_rs_name () {
+    if [ -z "$rs_name" ]; then
+	echo "you have to set up git remote"
+	return 1
+    fi
+    if ! cat /etc/hosts | grep -q "127.0.0.1 $rs_name"; then
+	echo "copy and run the following line"
+	echo "sudo -- sh -c \"echo '127.0.0.1 $rs_name' >> /etc/hosts\""
+	return 1
+    fi
+}
+
+alias rs='spring stop; check_rs_name && rails s -b $rs_name'
+alias rc='spring stop; rails c'
 alias rdbd='dka; spring stop; rails db:drop RAILS_ENV=development'
 alias rdbc='rails db:create RAILS_ENV=development'
 alias rdbm='rails db:migrate RAILS_ENV=development'
@@ -192,3 +209,4 @@ alias rdbr='rdbd; rdbc; rdbm'
 alias rdbrt='rdbdt; rdbct; rdbmt'
 alias rds="rails db:seed"
 alias rdbrb="rails db:rollback"
+alias rspec='spring stop; rspec'
