@@ -56,12 +56,10 @@ end
 
 h_bind("i", launchApp("iTerm"))
 h_bind(",", launchApp("Visual Studio Code"))
-h_bind("g", launchApp("Gmail"))
 h_bind("b", launchApp("Google Chrome"))
 h_bind("p", launchApp("System Preferences"))
-h_bind("4", launchApp("Finder"))
+h_bind("5", launchApp("Finder"))
 h_bind("'", launchApp("Slack"))
-h_bind("u", launchApp("Music"))
 h_bind("t", launchApp("aText"))
 
 
