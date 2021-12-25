@@ -199,6 +199,7 @@ check_rs_name () {
 }
 
 alias rs='spring stop; check_rs_name && rails s -b $rs_name'
+alias rr='spring stop; rails restart'
 alias rc='spring stop; rails c'
 alias rdbd='dka; spring stop; rails db:drop RAILS_ENV=development'
 alias rdbc='rails db:create RAILS_ENV=development'
@@ -208,6 +209,6 @@ alias rdbct='rails db:create RAILS_ENV=test'
 alias rdbmt='rails db:migrate RAILS_ENV=test'
 alias rdbr='rdbd; rdbc; rdbm'
 alias rdbrt='rdbdt; rdbct; rdbmt'
-alias rds="rails db:seed"
+alias rdbs="rails db:seed"
 alias rdbrb="rails db:rollback"
 alias rspec='spring stop; rspec'
