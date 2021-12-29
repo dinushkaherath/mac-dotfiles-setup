@@ -215,3 +215,6 @@ alias rdbrt='rdbdt; rdbct; rdbmt'
 alias rdbs="rails db:seed"
 alias rdbrb="rails db:rollback"
 alias rspec='spring stop; rspec'
+
+# I forget where vim configs are... here they are!
+alias vivim='vi ~/.config/nvim/init.vim'
