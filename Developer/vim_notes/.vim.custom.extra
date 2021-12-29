@@ -1,0 +1,3 @@
+inoremap <CR> <C-\><C-O><C-E><CR>
+inoremap <BS> <BS><C-O>zz
+nnoremap o <C-E>o
