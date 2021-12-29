@@ -87,3 +87,6 @@ Developer/temp_tutorials
 .quokka
 .rest-client
 .yarn/
+.swiftpm/cache
+.swiftpm/config
+Developer/vim_notes/.vim.custom
