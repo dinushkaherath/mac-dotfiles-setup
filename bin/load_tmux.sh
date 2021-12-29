@@ -24,7 +24,7 @@ do
 			break
 			;;
 		"New Cornerstone")
-			cd /Users/dinushkaherath/Developer/github/cornerstone-api
+			cd /Users/dinushkaherath/Developer/github/cornerstone-api/api
 			~/bin/./corner_tmux.sh
 			break
 			;;
