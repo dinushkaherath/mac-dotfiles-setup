@@ -172,7 +172,7 @@ alias gcc='g cherry-pick --continue'
 alias gca='g cherry-pick --abort'
 alias gcs='g cherry-pick --skip'
 alias gcom='gco ${MASTER:-master}; gp'
-alias gclb='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch -d'
+alias gcls='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch -d'
 alias gls='g remote update --prune; gbr | grep origin'
 alias go="g remote -v | grep 'origin.*push' | sed 's/.*://g' | sed 's/\.git.*//g' | (echo -n 'http://www.github.com/' && cat) | xargs open"
 gri() {
@@ -218,3 +218,4 @@ alias rspec='spring stop; rspec'
 
 # I forget where vim configs are... here they are!
 alias vivim='vi ~/.config/nvim/init.vim'
+export CSS='/Users/dinushkaherath/Developer/github/css_themes/'
