@@ -91,3 +91,4 @@ Developer/temp_tutorials
 .swiftpm/config
 Developer/vim_notes/.vim.custom
 Developer/scripts/today.verse
+Developer/vim_notes/*.txt
