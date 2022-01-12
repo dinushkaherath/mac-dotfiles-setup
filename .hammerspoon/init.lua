@@ -87,12 +87,12 @@ hs_bind("`", positionWindow(1/3, 0, 1/2, 1))
 -- Spoon
 -- install from https://www.hammerspoon.org/Spoons/
 
-clipboardTool = hs.loadSpoon("ClipboardTool")
-clipboardTool.paste_on_select = true
-clipboardTool.show_in_menubar = false
-clipboardTool.show_copied_alert = false
-clipboardTool:start()
-h_bind("v", function() clipboardTool:toggleClipboard() end)
+-- clipboardTool = hs.loadSpoon("ClipboardTool")
+-- clipboardTool.paste_on_select = true
+-- clipboardTool.show_in_menubar = false
+-- clipboardTool.show_copied_alert = false
+-- clipboardTool:start()
+-- h_bind("v", function() clipboardTool:toggleClipboard() end)
 -- hs_bind("c", function() clipboardTool:clearAll() end)
 
 -- vi like cursor movements
