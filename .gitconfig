@@ -1,6 +1,7 @@
 [user]
 	name = dinushkaherath
 	email = dinushka.herath@gmail.com
+	signingkey = CCD0BA16BDDE0CCE
 [pull]
 	rebase = false
 [init]
