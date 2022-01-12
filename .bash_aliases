@@ -175,6 +175,16 @@ alias gcom='gco ${MASTER:-master}; gp'
 alias gcls='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch -d'
 alias gls='g remote update --prune; gbr | grep origin'
 alias go="g remote -v | grep 'origin.*push' | sed 's/.*://g' | sed 's/\.git.*//g' | (echo -n 'http://www.github.com/' && cat) | xargs open"
+alias gpub='git push --set-upstream origin $(git branch --show-current)'
+gpuh() {
+    if [ -z "$1" ]
+    then
+	branch=$(git branch --show-current)
+	git push staging $branch:master --force
+    else
+	git push staging "${MASTER:-master}":master -force
+    fi
+}
 gri() {
     if [ -z "$1" ]
     then
