@@ -101,6 +101,7 @@ _comp_options+=(globdots)
 
 #Personal additions
 alias virc='vi ~/.bash_aliases'
+alias zshrc='vi ~/.zshrc'
 alias src='source ~/.zshrc'
 
 alias abrew="/opt/homebrew/bin/brew"
