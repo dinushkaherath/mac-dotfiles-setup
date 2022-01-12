@@ -1,6 +1,6 @@
 if [[ $- == *i* ]]
 then
-    shuf -n 1 ~/Developer/scripts/520vvs.txt | xargs python3 ~/Developer/scripts/verses.py | sed 's/[\[\]]//g' | cowsay -f stegosaurus
+    python3 ~/Developer/scripts/verses.py | sed 's/[\[\]]//g' | cowsay -f stegosaurus
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
