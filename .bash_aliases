@@ -230,3 +230,6 @@ alias rspec='spring stop; rspec'
 # I forget where vim configs are... here they are!
 alias vivim='vi ~/.config/nvim/init.vim'
 export CSS='/Users/dinushkaherath/Developer/github/css_themes/'
+
+# add GPG keys stuff verified commits
+export GPG_TTY=$(tty)

@@ -8,3 +8,5 @@
 	defaultBranch = main
 [core]
 	excludesfile = /Users/dinushkaherath/.gitignore_global
+[commit]
+	gpgsign = true
