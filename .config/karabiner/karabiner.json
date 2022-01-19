@@ -41,11 +41,11 @@
                         ]
                     },
                     {
-                        "description": "Change shift to escape if alone",
+                        "description": "Change command to escape if alone",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_shift",
+                                    "key_code": "left_command",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -54,7 +54,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
