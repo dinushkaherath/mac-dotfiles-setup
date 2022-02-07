@@ -27,7 +27,6 @@ try:
         no_input = True
         lines = open('/Users/dinushkaherath/Developer/scripts/520vvs.txt').read().splitlines()
         i = random.choice(lines)
-        print(i)
     link = "https://api.lsm.org/recver.php?String='" + i + "'&Out=json"
     link = link.replace(" ","%20")
     f = urllib.request.urlopen(link)
@@ -38,7 +37,7 @@ try:
         o += verse["text"] + "\n"
     print(o)
     if no_input:
-        f = open("today.verse", "w")
+        f = open("/Users/dinushkaherath/Developer/scripts/today.verse", "w")
         f.write(o)
         f.close()
 except:
