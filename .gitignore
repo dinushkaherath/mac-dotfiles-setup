@@ -92,3 +92,6 @@ Developer/temp_tutorials
 Developer/vim_notes/.vim.custom
 Developer/vim_notes/*.txt
 today.verse
+.android/analytics.settings
+.config/configstore/update-notifier-npm.json
+.config/SmartSetMaster (Mac)/reg.xml
