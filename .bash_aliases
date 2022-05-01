@@ -237,3 +237,9 @@ export GPG_TTY=$(tty)
 # docker execute
 first_doc=$(echo "$(dps -a --format '{{.Names}}' )" | head -n 1)
 alias dx='docker exec -it ${DOCKER_EXEC:-$first_doc}'
+dxx() {
+  docker exec -it $( docker ps | grep $1 | awk "{print \$1}" | head -n 1 ) "${@:2}"
+}
+alias dxs='dx bin/startup.sh'
+alias dxb='dx bash'
+
