@@ -212,7 +212,7 @@ check_rs_name () {
     fi
 }
 
-alias rs='spring stop; check_rs_name && rails s -b $rs_name'
+alias rs='spring stop; check_rs_name && rails s -b $(get_rs_name) -p 3001'
 alias rr='spring stop; rails restart'
 alias rc='spring stop; rails c'
 alias rdbd='spring stop; rails db:drop RAILS_ENV=development'
