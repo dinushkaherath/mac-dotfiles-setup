@@ -198,9 +198,9 @@ gri() {
 get_rs_name() {
     basename $(git remote show -n origin | grep Push | cut -d: -f2-)
 }
-rs_name=$(get_rs_name)
 
 check_rs_name () {
+    rs_name=$(get_rs_name)
     if [ -z "$rs_name" ]; then
 	echo "you have to set up git remote"
 	return 1
