@@ -243,3 +243,4 @@ dxx() {
 alias dxs='dx bin/startup.sh'
 alias dxb='dx bash'
 
+export ASDF_DIR='/opt/homebrew/Cellar/asdf/0.10.0/libexec'
