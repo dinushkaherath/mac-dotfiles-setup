@@ -134,7 +134,7 @@ if [[ "$_ARCH" == "arm64" ]]; then
 fi
 alias color='echo -ne "\033]1337;SetColors=bg=1e1d40\007"'
 
-. /opt/homebrew/opt/asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
