@@ -160,7 +160,8 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 alias update='brew update && brew upgrade'
 alias dps='docker ps -a'
-alias dka='docker container kill $(docker ps -q) > /dev/null 2>&1; docker container rm $(docker ps -a -q) > /dev/null 2>&1; echo "docker containers killed"'
+alias dka='docker container kill $(docker ps -q) > /dev/null 2>&1; docker container rm $(docker ps -a -q) > /dev/null 2>&1; echo "docker containers killed and removed"'
+alias dsa='docker container kill $(docker ps -q) > /dev/null 2>&1; echo "docker containers killed"'
 alias py='python3'
 alias tm='~/bin/./load_tmux.sh'
 alias gmc='g merge --continue'
