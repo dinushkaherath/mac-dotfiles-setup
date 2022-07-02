@@ -69,6 +69,11 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+for dir in /opt/homebrew/Cellar/asdf/*; do
+  [[ -d $dir ]] || continue
+  export ASDF_DIR=$dir/libexec
+done
+
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

@@ -170,6 +170,7 @@ alias gmm='g merge ${MASTER:-master}'
 alias grc='g rebase --continue'
 alias gra='g rebase --abort'
 alias grm='g rebase ${MASTER:-master}'
+alias gcp='g cherry-pick'
 alias gcc='g cherry-pick --continue'
 alias gca='g cherry-pick --abort'
 alias gcs='g cherry-pick --skip'
@@ -177,7 +178,7 @@ alias gcom='gco ${MASTER:-master}; gp'
 alias gls='g remote update --prune; gbr | grep master; gb | cat'
 alias gcls='gcom; g branch --no-contains ${MASTER:-master} --merged ${MASTER:-master} | xargs git branch -d; gls'
 alias go="g remote -v | grep 'origin.*push' | sed 's/.*://g' | sed 's/\.git.*//g' | (echo -n 'http://www.github.com/' && cat) | xargs open"
-alias gpub='git push --set-upstream origin $(git branch --show-current)'
+alias gpub='g push --set-upstream origin $(git branch --show-current)'
 gpuh() {
     if [ -z "$1" ]
     then
@@ -243,5 +244,9 @@ dxx() {
 }
 alias dxs='dx bin/startup.sh'
 alias dxb='dx bash'
+alias dxc='dx rails c'
 
-export ASDF_DIR='/opt/homebrew/Cellar/asdf/0.10.0/libexec'
+for dir in /opt/homebrew/Cellar/asdf/*; do
+  [[ -d $dir ]] || continue
+  export ASDF_DIR=$dir/libexec
+done
